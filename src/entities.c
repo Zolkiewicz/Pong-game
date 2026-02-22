@@ -19,3 +19,23 @@ void cleanBoard(Board* board) {
         }
     } 
 }
+
+void initBall(Ball* ball) {
+    ball->y = HEIGHT / 2;
+    ball->x = WIDTH / 2;
+    ball->x_direction = -1;
+    ball->y_direction = -1;
+}
+
+void moveBall(Ball* ball) {
+    ball->y += ball->y_direction;
+    ball->x += ball->x_direction;
+}
+
+void changeYDir(Ball* ball) {
+    ball->y_direction *= -1;
+}
+
+void changeXDir(Ball* ball) {
+    ball->x_direction *= -1;
+}
