@@ -56,4 +56,25 @@ int main(void) {
 
     assert(ball.x_direction == 1);
     assert(ball.y_direction == 1);    
+
+    //paddle tests
+
+    Paddle paddle;
+
+    initPaddle(&paddle);
+
+    assert(paddle.top == paddle.bot + paddle.size);
+    int tmp = paddle.top;
+
+    moveUP(&paddle);
+
+    assert(paddle.top == paddle.bot + paddle.size);
+    assert(tmp + 1 == paddle.top);
+
+    moveDOWN(&paddle);
+
+    assert(paddle.top == paddle.bot + paddle.size);
+    assert(tmp == paddle.top);
+
+    return 0;
 }

@@ -16,6 +16,12 @@ typedef struct {
     int x_direction; // -1 - left, 1 - right
 } Ball;
 
+typedef struct {
+    int top;
+    int bot;
+    int size;
+} Paddle;
+
 void initBoard(Board* board);
 void cleanBoard(Board* board);
 
@@ -23,4 +29,8 @@ void initBall(Ball* ball);
 void moveBall(Ball* ball);
 void changeYDir(Ball* ball);
 void changeXDir(Ball* ball);
+
+void initPaddle(Paddle* paddle);
+void moveUP(Paddle* paddle);
+void moveDOWN(Paddle* paddle);
 #endif // !ENTITIES_H
