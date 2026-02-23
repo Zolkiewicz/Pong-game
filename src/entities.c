@@ -15,9 +15,11 @@ void initBoard(Board* board) {
 void cleanBoard(Board* board) {
     for (int y = 0; y < board->height; y++) {
         for (int x = 0; x < board->width; x++) {
-            board->cells[y][x] = ' ';
+            if (x == board->width / 2) board->cells[y][x] = '|';
+            else board->cells[y][x] = ' ';
         }
     } 
+    
 }
 
 void initBall(Ball* ball) {

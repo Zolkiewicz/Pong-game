@@ -3,6 +3,7 @@
 #include <unistd.h>
 
 int main(void) {
+    start();
     Game game;
     initGame(&game);
 
