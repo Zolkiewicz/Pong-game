@@ -42,17 +42,17 @@ void changeXDir(Ball* ball) {
 
 void initPaddle(Paddle* paddle, int x) {
     paddle->size = PADDLE_SIZE;
-    paddle->top = HEIGHT / 2;
-    paddle->bot = paddle->top - paddle->size;
+    paddle->bot = HEIGHT / 2;
+    paddle->top = paddle->bot - paddle->size;
     paddle->x = x;
 }
 
 void moveUP(Paddle* paddle) {
-    paddle->top++;
-    paddle->bot++;
+    paddle->top--;
+    paddle->bot--;
 }
 
 void moveDOWN(Paddle* paddle) {
-    paddle->top--;
-    paddle->bot--;
+    paddle->top++;
+    paddle->bot++;
 }

@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include "entities.h"
 #include "logic.h"
+#include "input.h"
 
 typedef struct {
     Board board;
@@ -17,5 +18,6 @@ void initGame(Game* game);
 void setBoardCells(Game* game);
 void updateGame(Game* game);
 void GameOver(Game* game);
+void handleInput(Game* game);
 
 #endif // !GAME_H

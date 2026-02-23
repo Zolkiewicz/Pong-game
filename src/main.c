@@ -8,10 +8,9 @@ int main(void) {
     int x = 0;
 
     while (!game.gameover) {
+        handleInput(&game);
         updateGame(&game);
         render(&game);
-        usleep(20000);
-        x++;
-        if (x == 1000) GameOver(&game);
+        usleep(100000);
     }
 }

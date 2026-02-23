@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
 
-SRC = src/entities.c src/logic.c src/game.c src/UI.c
+SRC = src/entities.c src/logic.c src/game.c src/UI.c src/input.c
 
 .PHONY: TestsEntities TestLogic Tests clean
 
