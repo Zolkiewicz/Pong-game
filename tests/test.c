@@ -61,7 +61,7 @@ int main(void) {
 
     Paddle paddle;
 
-    initPaddle(&paddle);
+    initPaddle(&paddle, 1);
 
     assert(paddle.top == paddle.bot + paddle.size);
     int tmp = paddle.top;

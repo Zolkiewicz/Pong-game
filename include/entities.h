@@ -20,6 +20,7 @@ typedef struct {
     int top;
     int bot;
     int size;
+    int x;
 } Paddle;
 
 void initBoard(Board* board);
@@ -30,7 +31,7 @@ void moveBall(Ball* ball);
 void changeYDir(Ball* ball);
 void changeXDir(Ball* ball);
 
-void initPaddle(Paddle* paddle);
+void initPaddle(Paddle* paddle, int x);
 void moveUP(Paddle* paddle);
 void moveDOWN(Paddle* paddle);
 #endif // !ENTITIES_H

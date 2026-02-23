@@ -8,6 +8,8 @@
 typedef struct {
     Board board;
     Ball ball;
+    Paddle paddle1;
+    Paddle paddle2;
     bool gameover;
 } Game;
 
