@@ -25,10 +25,15 @@ void setBoardCells(Game* game) {
 }
 
 void updateGame(Game* game) {
-    if (ballHitWall(game->ball, game->board)) 
+    if (isOver(&(game->ball), &(game->board))) {
+        GameOver(game);
+        return;
+    }
+
+    if (ballHitWall(&(game->ball), &(game->board))) 
         changeYDir(&(game->ball));
     
-    if (flipX(game->ball, game->board))
+    if (flipX(&(game->ball), &(game->paddle1), &(game->paddle2)))
         changeXDir(&(game->ball));
 
     moveBall(&(game->ball));
